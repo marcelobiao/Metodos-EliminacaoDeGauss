@@ -6,9 +6,16 @@ a=[ 45   3  -14   1 -7   8;
      5  -5   -6  18  2   1;
    -11   1   -4  23 -5  11;
    -25  16  -11   9  9 -15];
-%b=Matriz resposta
-b=[12; -2; 0; -3; 23; -12];
 
+%b=Matriz resposta
+b=[ 12;
+    -2;
+     0;
+    -3;
+    23;
+   -12];
+
+%Execucao
 raizes = eliminacaoDeGauss(a,b);
 fprintf('Raizes:\n');
 disp(raizes);
