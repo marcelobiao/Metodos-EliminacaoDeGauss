@@ -1,4 +1,5 @@
 function raizes = eliminacaoDeGauss(A,b)
+    fprintf('Eliminacao de Gauss:\n');
     [m,n] = size(A);
     Ab = [A b];
     for k=1:n-1

@@ -16,6 +16,9 @@ b=[ 12;
    -12];
 
 %Execucao
-raizes = eliminacaoDeGauss(a,b);
+raizesGauss = eliminacaoDeGauss(a,b);
+raizesLU = fatoracaoLU(a,b);
+
 fprintf('Raizes:\n');
-disp(raizes);
+n=1;
+fprintf('%d: %f | %f',(n++),raizesGauss,raizesLU);
