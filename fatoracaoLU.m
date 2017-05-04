@@ -8,13 +8,13 @@ function raizes = fatoracaoLU(A,b)
         0 0 0 0 0 0;
         0 0 0 0 0 0;
         0 0 0 0 0 0];
-    
     U=[ 1 0 0 0 0 0;
         0 1 0 0 0 0;
         0 0 1 0 0 0;
         0 0 0 1 0 0;
         0 0 0 0 1 0;
         0 0 0 0 0 1];
+    
     k=1;
 	for i=1:m
 		for j=1:n
@@ -24,14 +24,10 @@ function raizes = fatoracaoLU(A,b)
 				U(i,j)=(A(i,j)-(L(i,k:j-1)*U(k:j-1,j)))/L(i,i);
 			end
 		end
-	end
-	%TODO: Resolver Sistema linear.
+    end
 	fprintf('L:\n');
 	disp(L);
 	fprintf('U:\n');
 	disp(U);
-    y=backsub(L,b);
-    fprintf('y\n');
-    disp(y);
-	raizes=backsub(U,y);
+	raizes=backsub(U,backinf(L,b));
 end

@@ -8,5 +8,7 @@ function X=backsub(A,B)
  X(n)=B(n)/A(n,n);
 
 for k=n-1:-1:1
- X(k)=(B(k)-A(k,k+1:n)*X(k+1:n))/A(k,k);
+    fprintf('aqui\n');
+    disp(k);
+     X(k)=(B(k)-A(k,k+1:n)*X(k+1:n))/A(k,k);
 end
